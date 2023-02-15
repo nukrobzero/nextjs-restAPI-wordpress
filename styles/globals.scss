@@ -1,0 +1,52 @@
+@import "~@wordpress/base-styles/colors";
+@import "~@wordpress/base-styles/variables";
+@import "~@wordpress/base-styles/mixins";
+@import "~@wordpress/base-styles/breakpoints";
+@import "~@wordpress/base-styles/animations";
+@import "~@wordpress/base-styles/z-index";
+
+//@import '~@wordpress/block-library/src/style.scss'; //bug
+@import "~@wordpress/block-library/src/theme.scss";
+
+:root {
+  html,
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    padding: 0rem 2rem;
+  }
+
+  /* color*/
+  --color-1: #ffffff;
+  --color-2: #000000;
+
+  background: var(--color-2);
+  color: var(--color-1);
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+
+      a {
+        text-decoration: none;
+        color: var(--color-1);
+        &:hover {
+          color: blue;
+        }
+      }
+    }
+  }
+  .uagb-slick-carousel,figure {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+  }
+  
+  img {
+    width: 280px;
+    height: 200px;
+  }
+}
